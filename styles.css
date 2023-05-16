@@ -1,0 +1,51 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+main {
+    background-color: #2E0249;
+    display: flex;
+    max-width: 1440px;
+    max-height: 1024px;
+}
+
+.main-container {
+    padding: 64px;
+}
+
+h1 {
+    color: white;
+    font-size: 48px;
+}
+
+em {
+    color: #A91079;
+    font-style: normal;
+}
+
+address p {
+    color: white;
+    font-style: normal;
+    padding: 24px;
+}
+
+.social {
+    padding-top: 50px;
+}
+
+.form-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 48px;
+    margin: auto 64px;
+    border-radius: 24px;
+    width: 700px;
+}
+
+li {
+    list-style: none;
+    display: flex;
+}
