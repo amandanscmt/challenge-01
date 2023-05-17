@@ -3,20 +3,28 @@
   margin: 0;
 }
 
-main {
+body {
   background-color: #2e0249;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+main {
   display: flex;
 }
 
 .main-container {
-  padding: 64px;
+  padding: 0 48px;
+  padding-top: 20px;
+  width: 50%;
   display: flex;
   flex-direction: column;
 }
 
 h1 {
-  color: #ffffff;
-  font-size: 48px;
+  color: #eeeeee;
+  font-size: 3rem;
 }
 
 em {
@@ -24,11 +32,15 @@ em {
   font-style: normal;
 }
 
+address {
+  padding-top: 2em;
+}
+
 address p {
-  color: #ffffff;
+  color: #eeeeee;
   font-style: normal;
-  padding: 24px;
-  font-size: 20px;
+  padding: 20px;
+  font-size: 18px;
 }
 
 address p:hover {
@@ -36,13 +48,17 @@ address p:hover {
   border-radius: 16px;
   border-color: #a91079;
   border-width: 3px;
-  padding: 21px;
+  padding: 17px;
   border-style: solid;
 }
 
 address img {
   padding-right: 10px;
-  width: 20px;
+  width: 18px;
+}
+
+.social {
+  padding-top: 4em;
 }
 
 .social img {
@@ -57,23 +73,89 @@ address img {
 }
 
 .form-container {
-  background-color: #ffffff;
+  background-color: #eeeeee;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   padding: 48px;
   margin: auto 64px;
   border-radius: 24px;
-  width: 700px;
+  width: 50%;
+}
+
+.form-container p {
+  color: #2e0249;
+  font-weight: 500;
 }
 
 ul {
+  padding: 20px 0;
+}
+
+li {
   list-style: none;
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
+  padding: 10px;
+  margin: 5px;
+  border-color: rgb(46, 2, 73, 0.3);
+  color: rgb(46, 2, 73, 0.3);
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+li:hover {
+  border-radius: 8px;
+  color: #eeeeee;
+  background-color: #a91079;
+  border-color: #a91079;
 }
 
 form {
   display: flex;
   flex-direction: column;
+}
+
+input {
+  padding: 5px;
+  margin: 10px;
+  border: 2px #A91079;
+  border-style: none none solid;
+  background-color: #eeeeee;
+  color: #2E0249;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+::-webkit-input-placeholder {
+  color: rgb(46, 2, 73, 0.3);
+}
+
+input:focus-visible {
+  outline: none;
+  caret-color: #a91079;
+}
+
+button {
+  background-color: rgb(46, 2, 73, 0.3);
+  border: rgb(46, 2, 73, 0.3) solid;
+  border-radius: 16px;
+  width: 50%;
+  padding: 1em;
+  color: #eeeeee;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #A91079;
+  border: #A91079 solid;
+  border-radius: 16px;
+  width: 50%;
+  padding: 1em;
+  color: #eeeeee;
+  font-size: 1em;
+}
+
+button img {
+  width: 1em;
 }
