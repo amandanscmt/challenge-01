@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" a href="/styles.css" />
+    <script src="app.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,6 +17,7 @@
   <body>
     <main>
       <section class="main-container">
+        <div id="title-and-content">
         <h1>
           Let’s discuss <br />
           on something <em>cool</em> together
@@ -31,29 +33,29 @@
           </p>
           <p><img src="/images/Vectorsocial.svg" />123 Street 456 House</p>
         </address>
-        <section class="social">
-          <a href="facebook.com"><img src="/images/Vectorfb.svg" /></a>
-          <a href="instagram.com"><img src="/images/Vectorinsta.svg" /></a>
-          <a href="twitter.com"><img src="/images/Vectortt.svg" /></a>
+      </div>
+        <section class="social-media">
+          <a href="facebook.com"><img src="/images/Vectorfb.svg"/ alt="Facebook logo"></a>
+          <a href="instagram.com"><img src="/images/Vectorinsta.svg" alt="Instagram logo"/></a>
+          <a href="twitter.com"><img src="/images/Vectortt.svg" alt="Twitter logo"/></a>
         </section>
       </section>
       <section class="form-container">
-        <p>I'm interested in...</p>
-        <ul>
-          <li>UI/UX Design</li>
-          <li>Web design</li>
-          <li>Graphic design</li>
-          <li>Design system</li>
-          <li>Other</li>
-        </ul>
         <form>
+          <p>I'm interested in...</p>
+          <ul>
+            <li>UI/UX Design</li>
+            <li>Web design</li>
+            <li>Graphic design</li>
+            <li>Design system</li>
+            <li>Other</li>
+          </ul>
           <input type="name" id="name" placeholder="Your name"/>
           <input type="email" id="email" placeholder="Your email"/>
           <input type="textarea" id="message" placeholder="Your message"/>
-          <button><img src="images/Vectorsend.svg" /> Send Message</a></button>
         </form>
+        <button><img src="images/Vectorsend.svg" /> Send Message</a></button>
       </section>
     </main>
-    <footer></footer>
   </body>
 </html>
