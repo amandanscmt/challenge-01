@@ -10,6 +10,7 @@ body {
 main {
   display: flex;
   height: 100vh;
+  width: 100vw;
 }
 
 .main-container {
@@ -86,17 +87,17 @@ form {
   font-size: 1em;
 }
 
-ul {
+.interests {
   padding-left: 0;
   padding-bottom: 2em;
   margin: 0 auto;
 }
 
-li {
-  list-style: none;
+.interests button {
   display: inline-flex;
-  padding: 10px;
-  margin: 5px;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  font-size: 1em;
   border-color: rgb(46, 2, 73, 0.3);
   color: rgb(46, 2, 73, 0.3);
   border-radius: 8px;
@@ -104,11 +105,12 @@ li {
   border-width: 2px;
 }
 
-li:hover {
+.interests button:hover {
   border-radius: 8px;
   color: #eeeeee;
   background-color: #a91079;
   border-color: #a91079;
+  cursor: pointer;
 }
 
 input {
@@ -131,17 +133,7 @@ input:focus-visible {
   caret-color: #a91079;
 }
 
-button {
-  background-color: rgb(46, 2, 73, 0.3);
-  border: rgb(46, 2, 73, 0.3) solid;
-  border-radius: 16px;
-  width: 50%;
-  padding: 1em;
-  color: #eeeeee;
-  font-size: 1em;
-}
-
-button:hover {
+#sendBtn {
   background-color: #a91079;
   border: #a91079 solid;
   border-radius: 16px;
@@ -149,8 +141,29 @@ button:hover {
   padding: 1em;
   color: #eeeeee;
   font-size: 1em;
+  cursor: pointer;
 }
 
-button img {
+#sendBtn:disabled {
+  background-color: rgb(46, 2, 73, 0.3);
+  border: rgb(46, 2, 73, 0.3) solid;
+  border-radius: 16px;
+  width: 50%;
+  padding: 1em;
+  color: #eeeeee;
+  font-size: 1em;
+  cursor: default;
+}
+
+#sendBtn img {
   width: 1em;
+}
+
+/* Errors */
+
+#nameError, #emailError, #messageError {
+  color: #a91079;
+  font-size: 0.8em;
+  margin: 0 1em;
+  display: none;
 }
