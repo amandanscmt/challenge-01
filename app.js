@@ -1,22 +1,26 @@
 // Disabled button when fields are unfilled
 
 function disableBtn() {
-  const userName = document.getElementById("name").value.trim();
+  const userName = document.getElementById("username").value.trim();
+  const fullName = userName.split(" ");
+  const validUserName = fullName.length;
   const userEmail = document.getElementById("email").value.trim();
+  const validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(userEmail);
   const userMessage = document.getElementById("message").value.trim();
+  const validMessage = userMessage.length;
   const sendButton = document.getElementById("sendBtn");
 
-  if (userName !== "" && userEmail !== "" && userMessage !== "") {
+  if (validUserName !== "" && validUserName >= 2 && validEmail !== "" && validMessage >= 20 && validMessage !== "") {
     sendButton.disabled = false;
   } else {
     sendButton.disabled = true;
   }
 }
 
-// Form validations
+// Error messages
 
 function validateUserName() {
-  const userName = document.getElementById("name").value.trim();
+  const userName = document.getElementById("username").value.trim();
   const nameError = document.getElementById("nameError");
   const fullName = userName.split(" ");
   const validUserName = fullName.length;
@@ -45,12 +49,41 @@ function validateUserEmail() {
 
 function validateMessage() {
   const userMessage = document.getElementById("message").value.trim();
-  const messageError = document.getElementById("messageError")
+  const messageError = document.getElementById("messageError");
+  
   if (userMessage.length >= 20) {
     messageError.style.display = "none";
     console.log('Valid message.')
   } else {
     messageError.style.display = "block";
-    console.log('Enter at least 20 characters.');
+    console.log('Enter at least 20 letters.');
   }
+}
+
+// localStorage
+
+function submitForm(event) {
+  event.preventDefault();
+
+  const userName = document.getElementById("username").value;
+  const userEmail = document.getElementById("email").value;
+  const userMessage = document.getElementById("message").value;
+  const checkbox = document.querySelectorAll('input[type="checkbox"]');
+  let userInterests;
+
+  checkbox.forEach(function(checkbox) {
+    if (checkbox.checked) {
+      userInterests = (checkbox.value);
+    }
+  });
+
+  const InterestForm = {
+    "Name" : userName,
+    "Email" : userEmail,
+    "Message" : userMessage,
+    "Interests" : userInterests
+  };
+
+  localStorage.setItem("New interest form", JSON.stringify(InterestForm));
+  document.getElementById("userInfo").reset();
 }

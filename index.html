@@ -36,29 +36,29 @@
         </div>
         <section class="social-media">
           <a href="facebook.com"
-            ><img src="/images/Vectorfb.svg"/ alt="Facebook logo"></a
+            ><span class="icon"><img src="/images/Vectorfb.svg"/ alt="Facebook logo"></span></a
           >
           <a href="instagram.com"
-            ><img src="/images/Vectorinsta.svg" alt="Instagram logo"
-          /></a>
+            ><span class="icon"><img src="/images/Vectorinsta.svg" alt="Instagram logo"
+          /></span></a>
           <a href="twitter.com"
-            ><img src="/images/Vectortt.svg" alt="Twitter logo"
-          /></a>
+            ><span class="icon"><img src="/images/Vectortt.svg" alt="Twitter logo"
+          /></span></a>
         </section>
       </section>
       <section class="form-container">
-        <form>
+        <form id="userInfo" onsubmit="submitForm(event)">
           <p>I'm interested in...</p>
           <div class="interests">
-            <button id="uiUx">UI/UX design</button>
-            <button id="webDesign">Web design</button>
-            <button id="graphicDesign">Graphic design</button>
-            <button id="designSystem">Design system</button>
-            <button id="other">Other</button>
+            <label class="checkbox">UI/UX Design <input type="checkbox" value="UI/UX" id="uiux" /></label>
+            <label class="checkbox">Web Design <input type="checkbox" value="Web Design" id="webdesign" /></label>
+            <label class="checkbox">Graphic Design <input type="checkbox" value="Graphic Design" id="graphicdesign" /></label>
+            <label class="checkbox">Design System <input type="checkbox" value="Design System" id="designsystem" /></label>
+            <label class="checkbox">Other <input type="checkbox" value="Other" id="other" /></label>
           </div>
           <input
             type="name"
-            id="name"
+            id="username"
             oninput="disableBtn(), validateUserName()"
             placeholder="Your name"
           />
@@ -76,11 +76,9 @@
             oninput="disableBtn(), validateMessage()"
             placeholder="Your message"
           />
-          <p id="messageError">Enter at least 20 characters.</p>
+          <p id="messageError">Enter at least 20 letters.</p>
         </form>
-        <button id="sendBtn" disabled>
-          <img src="images/Vectorsend.svg" /> Send Message
-        </button>
+        <button type="submit" form="userInfo" id="sendBtn" disabled><img src="images/Vectorsend.svg" /> Send Message</button>
       </section>
     </main>
   </body>
