@@ -7,6 +7,13 @@ body {
   margin: 0 auto;
 }
 
+/* Main content */
+
+h1 {
+  color: #eeeeee;
+  font-size: 3rem;
+}
+
 main {
   display: flex;
   height: 100vh;
@@ -20,11 +27,6 @@ main {
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
-}
-
-h1 {
-  color: #eeeeee;
-  font-size: 3rem;
 }
 
 em {
@@ -64,6 +66,8 @@ address img {
   background-color: #a91079;
   border-radius: 50%;
 }
+
+/* Form container */
 
 form {
   display: flex;
@@ -131,6 +135,8 @@ input:focus-visible {
   outline: none;
   caret-color: #a91079;
 }
+
+/* Submit button */
 
 #sendBtn {
   background-color: #a91079;
